@@ -9,6 +9,12 @@ public class mergesort {
         //inicializamos un arreglo temporal para realizar las operaciones a parte
         int[] temp = new int[n];
 
+    
+        
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
         
     }
     
