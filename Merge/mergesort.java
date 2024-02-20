@@ -9,6 +9,9 @@ public class mergesort {
         //inicializamos un arreglo temporal para realizar las operaciones a parte
         int[] temp = new int[n];
 
+
+        //queda pendiente un cliclo anidado de comparación entre el arreglo original y el arreglo segundario
+
     
         
         for (int i = 0; i < n; i++) {
