@@ -13,6 +13,7 @@ public class mergesort {
         //queda pendiente un cliclo anidado de comparación entre el arreglo original y el arreglo segundario
         //Ciclo de iteración linear inicialmente de a 1 elemento, duplicándolo en cada turno 
         for(int tam = 1; tam < n; tam *= 2 ){
+            // Recorrer el arreglo en segmentos del tamaño actual
             for(int ini = 0; ini < n - 1;ini += 2 * tam){
 
             }
