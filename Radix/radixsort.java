@@ -15,6 +15,11 @@ public class radixsort {
         while (mayor > 0) {
 
 
+            // Impresion de cada iteracion
+            for (int i : arr) {
+                System.out.print(i + ", ");
+            }
+            System.out.println();
             mayor = mayor / 10;
         }
     }
