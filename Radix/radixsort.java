@@ -4,11 +4,23 @@ public class radixsort {
     public static void main(String[] args) {
         int[] arr = { 22, 178, 249, 6, 18, 314};
         int[] arr2 = new int[9];
-        int mayor = Arrays.stream(arr).max().getAsInt();
+        int mayor = MAX(arr);
 
         System.out.println("Arreglo inicial: ");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + ", ");
+        for (int j : arr) {
+            System.out.print(j + ", ");
         }
+
+        System.out.println("\n" + mayor);
+    }
+
+    public static int MAX (int[] arreglo){
+        int max = arreglo[1];
+        for (int j : arreglo) {
+            if (j > max) {
+                max = j;
+            }
+        }
+        return max;
     }
 }
