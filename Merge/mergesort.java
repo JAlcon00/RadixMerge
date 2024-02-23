@@ -1,8 +1,10 @@
 package Merge;
- import java.util.*;
+import java.util.*;
  /*
-  * Hacer un merge sort a travez de porcentaje de reciduos
-  */
+  * Author A: Almanza Contreras José de Jesús
+  * Author B: Alonso Romero Pablo Emilio
+  * Author C: Duran Torres Leonardo Gael
+*/
 
 public class mergesort {
     public static void main(String[] args) {
@@ -80,5 +82,4 @@ public class mergesort {
 
         
     }
-    
-}
+}    
