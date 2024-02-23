@@ -10,8 +10,13 @@ public class radixsort {
         for (int j : arr) {
             System.out.print(j + ", ");
         }
+        System.out.println();
 
-        System.out.println("\n" + mayor);
+        while (mayor > 0) {
+
+
+            mayor = mayor / 10;
+        }
     }
 
     public static int MAX (int[] arreglo){
