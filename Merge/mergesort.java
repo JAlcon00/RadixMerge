@@ -1,9 +1,14 @@
 package Merge;
 import java.util.*;
+
+
  /*
   * Author A: Almanza Contreras José de Jesús
   * Author B: Alonso Romero Pablo Emilio
   * Author C: Duran Torres Leonardo Gael
+    Hacer un programa que tome un arreglo caracteres aleatorios con n datos e implemente
+    el algoritmo de ordenamiento Merge Sort en el cual los datos se separan por dato, se mandan
+    a un arreglo temporal, se reordenan por dato, se reordenan desde la unidades, decenas, centenas y millares 
 */
 
 public class mergesort {
@@ -22,6 +27,7 @@ public class mergesort {
             for(int ini = 0; ini < n - 1;ini += 2 * tam){
                 // Calcular el final del segmento actual
                 // Encontrar el punto medio y el final del segmento derecho
+                // se toman los grupos de numeros hasta que esten ordenados
                 int fin = Math.min(ini + 2 * tam - 1, n - 1);
                 int mid = Math.min(ini + tam - 1, n - 1);
                 
