@@ -5,6 +5,7 @@ public class radixsort {
         int[] arr = { 22, 178, 249, 6, 18, 314};
         int[] arr2 = new int[9];
         int mayor = MAX(arr);
+        int iteraciones = iteraciones(mayor);
 
         System.out.println("Arreglo inicial: ");
         for (int j : arr) {
@@ -32,5 +33,14 @@ public class radixsort {
             }
         }
         return max;
+    }
+
+    public static int iteraciones (int mayor){
+        int iteraciones = 0;
+        while (mayor > 0) {
+            mayor = mayor / 10;
+            iteraciones++;
+        }
+        return iteraciones;
     }
 }
