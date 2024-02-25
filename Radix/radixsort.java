@@ -13,7 +13,7 @@ public class radixsort {
         }
         System.out.println();
 
-        while (mayor > 0) {
+        while (iteraciones > 0) {
 
 
             // Impresion de cada iteracion
@@ -21,7 +21,7 @@ public class radixsort {
                 System.out.print(i + ", ");
             }
             System.out.println();
-            mayor = mayor / 10;
+            --iteraciones;
         }
     }
 
