@@ -4,7 +4,6 @@ public class radixsort {
     public static void main(String[] args) {
         int[] arr = { 22, 178, 249, 6, 18, 314};
         int[][] arr2 = new int[10][10];
-        int[] arregloordenado = new int[arr.length];
         int mayor = MAX(arr);
         int iteraciones = iteraciones(mayor) - 1;
         int digitos = iteraciones + 1;
@@ -17,6 +16,7 @@ public class radixsort {
 
         int numeroimpresion = 1;
         while (iteraciones >= 0) {
+            int posicion = 0;
             for (int i = 0; i < arr.length; i++) {
                 String numero = Integer.toString(arr[i]);
                 if (numero.length() < digitos) {
@@ -26,7 +26,6 @@ public class radixsort {
                     }
                 }
                 char valor = numero.charAt(iteraciones);
-                int posicion = 0;
                 switch (valor) {
                     case '0':
                         arr2[0][posicion] = arr[i];
@@ -74,7 +73,12 @@ public class radixsort {
             }
 
             // Impresion de cada iteracion
-            System.out.println("Iteracion " + numeroimpresion);
+
+            if (iteraciones == 0) {
+                System.out.println("Arreglo ordenado: ");
+            } else {
+                System.out.println("Iteracion " + numeroimpresion);
+            }
             for (int i : arr) {
                 System.out.print(i + ", ");
             }
