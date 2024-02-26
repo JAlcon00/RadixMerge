@@ -17,8 +17,8 @@ public class radixsort {
         int numeroimpresion = 1;
         while (iteraciones >= 0) {
             int posicion = 0;
-            for (int i = 0; i < arr.length; i++) {
-                String numero = Integer.toString(arr[i]);
+            for (int k : arr) {
+                String numero = Integer.toString(k);
                 if (numero.length() < digitos) {
                     int diferencia = digitos - numero.length();
                     for (int j = 0; j < diferencia; j++) {
@@ -27,16 +27,16 @@ public class radixsort {
                 }
                 char valor = numero.charAt(iteraciones);
                 switch (valor) {
-                    case '0' -> arr2[0][posicion] = arr[i];
-                    case '1' -> arr2[1][posicion] = arr[i];
-                    case '2' -> arr2[2][posicion] = arr[i];
-                    case '3' -> arr2[3][posicion] = arr[i];
-                    case '4' -> arr2[4][posicion] = arr[i];
-                    case '5' -> arr2[5][posicion] = arr[i];
-                    case '6' -> arr2[6][posicion] = arr[i];
-                    case '7' -> arr2[7][posicion] = arr[i];
-                    case '8' -> arr2[8][posicion] = arr[i];
-                    case '9' -> arr2[9][posicion] = arr[i];
+                    case '0' -> arr2[0][posicion] = k;
+                    case '1' -> arr2[1][posicion] = k;
+                    case '2' -> arr2[2][posicion] = k;
+                    case '3' -> arr2[3][posicion] = k;
+                    case '4' -> arr2[4][posicion] = k;
+                    case '5' -> arr2[5][posicion] = k;
+                    case '6' -> arr2[6][posicion] = k;
+                    case '7' -> arr2[7][posicion] = k;
+                    case '8' -> arr2[8][posicion] = k;
+                    case '9' -> arr2[9][posicion] = k;
                 }
                 ++posicion;
             }
