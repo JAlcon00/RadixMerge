@@ -2,8 +2,8 @@ package Radix;
 
 public class radixsort {
     public static void main(String[] args) {
-        int[] arr = { 22, 178, 249, 6, 18, 314};
-        int[][] arr2 = new int[10][10];
+        int[] arr = { 22, 178, 249, 6, 18, 314, -1};
+        Integer[][] arr2 = new Integer[10][10];
         int mayor = MAX(arr);
         int iteraciones = iteraciones(mayor) - 1;
         int digitos = iteraciones + 1;
@@ -44,16 +44,15 @@ public class radixsort {
             int variableordenado = 0;
             for (int i = 0; i < arr2.length; i++) {
                 for (int j = 0; j < arr2[i].length; j++) {
-                    if (arr2[i][j] != 0) {
+                    if (arr2[i][j] != null) {
                         arr[variableordenado] = arr2[i][j];
-                        arr2[i][j] = 0;
+                        arr2[i][j] = null;
                         variableordenado += 1;
                     }
                 }
             }
 
-            // Impresion de cada iteracion
-
+            // Impresion de cada iteracion e impresion final
             if (iteraciones == 0) {
                 System.out.println("Arreglo ordenado: ");
             } else {
