@@ -46,16 +46,36 @@ public class radixsort {
                 char valor = numero.charAt(iteraciones);
                 // Dependiendo del digito se acomoda el numero en la columna correspondiente
                 switch (valor) {
-                    case '0' -> arr2[0][posicion] = k;
-                    case '1' -> arr2[1][posicion] = k;
-                    case '2' -> arr2[2][posicion] = k;
-                    case '3' -> arr2[3][posicion] = k;
-                    case '4' -> arr2[4][posicion] = k;
-                    case '5' -> arr2[5][posicion] = k;
-                    case '6' -> arr2[6][posicion] = k;
-                    case '7' -> arr2[7][posicion] = k;
-                    case '8' -> arr2[8][posicion] = k;
-                    case '9' -> arr2[9][posicion] = k;
+                    case '0':
+                        arr2[0][posicion] = k;
+                        break;
+                    case '1':
+                        arr2[1][posicion] = k;
+                        break;
+                    case '2':
+                        arr2[2][posicion] = k;
+                        break;
+                    case '3':
+                        arr2[3][posicion] = k;
+                        break;
+                    case '4':
+                        arr2[4][posicion] = k;
+                        break;
+                    case '5':
+                        arr2[5][posicion] = k;
+                        break;
+                    case '6':
+                        arr2[6][posicion] = k;
+                        break;
+                    case '7':
+                        arr2[7][posicion] = k;
+                        break;
+                    case '8':
+                        arr2[8][posicion] = k;
+                        break;
+                    case '9':
+                        arr2[9][posicion] = k;
+                        break;
                 }
                 // Se aumenta la posicion para que cambie de columna
                 ++posicion;
