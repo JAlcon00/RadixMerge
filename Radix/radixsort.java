@@ -5,7 +5,7 @@ public class radixsort {
         // Arreglo original
         int[] arr = { 22, 178, 249, 6, 18, 314};
         /* Arreglo bidimensional en donde se acomodan los numeros dependiendo de su digito
-        *  se inicializa en nulls  */
+        *  se inicializa el arreglo en nulls  */
         Integer[][] arr2 = new Integer[10][arr.length];
         // Se obtiene el numero mayor del arreglo
         int mayor = MAX(arr);
