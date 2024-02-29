@@ -1,9 +1,12 @@
 package Radix;
+import java.util.Random;
 
 public class radixsort {
     public static void main(String[] args) {
-        // Arreglo original
-        int[] arr = { 22, 178, 249, 6, 18, 314};
+        // Tamaño del arreglo
+        int n = 6;
+        // Arreglo original con valores aleatorios
+        int[] arr = generarArreglo(n);
         /* Arreglo bidimensional en donde se acomodan los numeros dependiendo de su digito
         *  se inicializa el arreglo en nulls  */
         Integer[][] arr2 = new Integer[10][arr.length];
@@ -113,6 +116,16 @@ public class radixsort {
             // Cambia la iteracion. Cambia el digito que se va a tener que comparar
             --iteraciones;
         }
+    }
+
+    // Método para generar un arreglo de tamaño n con valores aleatorios
+    public static int[] generarArreglo(int n) {
+        int[] arr = new int[n];
+        Random rand = new Random();
+        for (int i = 0; i < n; i++) {
+            arr[i] = rand.nextInt(1000); // Genera valores aleatorios entre 0 y 999
+        }
+        return arr;
     }
 
     // Metodo para obtener el numero mayor del arreglo
