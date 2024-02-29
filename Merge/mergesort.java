@@ -1,21 +1,21 @@
 package Merge;
-//import java.util.*;
-
+import java.util.Random;
 /*
  * Author A: Almanza Contreras José de Jesús
  * Author B: Alonso Romero Pablo Emilio
  * Author C: Duran Torres Leonardo Gael
    Hacer un programa que tome un arreglo caracteres aleatorios con n datos e implemente
    el algoritmo de ordenamiento Merge Sort en el cual los datos se separan por dato, se mandan
-   a un arreglo temporal, se reordenan por dato, se reordenan desde la unidades, decenas, centenas y millares 
+   a un arreglo temporal, se reordenan por dato, se reordenan desde la unidades, decenas, centenas y millares
 */
 
 public class mergesort {
     public static void main(String[] args) {
-        // Arreglo de pruebas
-        int[] arr = { 453, 656, 123, 44, 90, 500, 45, 999, 34 };
-        int n = arr.length;
-        // inicializamos un arreglo temporal para realizar las operaciones a parte
+        // Tamaño del arreglo
+        int n = 9;
+        // Arreglo de pruebas con valores aleatorios
+        int[] arr = generarArreglo(n);
+        // Arreglo temporal para realizar las operaciones
         int[] temp = new int[n];
 
         // Se empieza a dividir los numeros en grupos más pequeños
@@ -79,6 +79,16 @@ public class mergesort {
         }
         System.out.println("\nArreglo ordenado: ");
         imprimirArreglo(arr);
+    }
+
+    // Método para generar un arreglo de tamaño n con valores aleatorios
+    public static int[] generarArreglo(int n) {
+        int[] arr = new int[n];
+        Random rand = new Random();
+        for (int i = 0; i < n; i++) {
+            arr[i] = rand.nextInt(1000); // Genera valores aleatorios entre 0 y 999
+        }
+        return arr;
     }
 
     // Se crea ImprimirArreglo a travez de un ciclo iterativo para que se
